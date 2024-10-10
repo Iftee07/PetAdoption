@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Adoption</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="lg:pt-7 lg:w-3/4 mx-auto pt-2">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl"
+            ><img src="./images/logo.webp" alt="" />
+            <p class="text-3xl font-bold">Peddy</p></a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>Shop</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn"
+            ><img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoUlEQVR4nO2WsUoDQRCGP7BSyyiiJiqClT5EsBQNES30FdTE1xCsLIOawiiIhaaJsdHXMAqCCGJttDAxIbIwkSVcdid3Ihb+MLAs9+1/M7e7c/CvP6gJIANcARXgXaIic1tA4icNx4Ec0ABanmgCZ8BUVNM08KYw7IwqkAprui0Z9GpqZ58Nk2kzgqltrs487invPbAADAIjwLGi7GMa40PHInVgJoCZB2oObl9zZFy7t+hgiw6uIZXsqoynbLsOdsfDbrqMyx4472DzHrbkMr7zwAUHW/CwFZdx1QNfA30BnJm7Uezu0MYmVgK4VQVXjVJqEw9AzGJiMteKUuqyYgETSYtJKpmSy3hLscAjMGQxZvyk4DZcxokuF4i5lU7kDu8P4MzcsjxTD+A/fReI0UEH9AzMotcc8NKxRk7b+O3dHaavpi3+FRjVgimrLZprtFdlhTVrLIWB2+bn0kB8mgQuLNMwL/2debvsH8ApsAZMAwMSZrwu/1o1q7yLRNQwsCc703dkTJZHvXxTjeLS2i6BW/lLeZNxSc6p98j8i9/WF3EwRr6LVHl0AAAAAElFTkSuQmCC"
+          /></a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero lg:w-5/12 mx-auto">
+      <div class="hero-content text-center">
+        <div class="py-10 space-y-5">
+          <h1 class="text-sm font-bold text-gray-500">
+            Bringing Families Together
+          </h1>
+          <h1 class="text-6xl font-bold">Your Path to Adoption Starts Here</h1>
+          <p class="py-6">
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+            a id nisi.
+          </p>
+          <a href="#main"
+            ><button
+              class="btn btn-primary bg-green-600 border-none text-black"
+            >
+              View More
+            </button></a
+          >
+
+          <img src="./images/pet.webp" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="lg:w-5/12 mx-auto text-center space-y-5 py-10">
+      <h1 id="main" class="text-3xl font-bold">Adopt Your Best Friend</h1>
+      <p class="w-3/4 mx-auto">
+        It is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a.
+      </p>
+    </div>
+
+    <div class="lg:w-3/4 mx-auto">
+      <div
+        id="btn_container"
+        class="grid grid-cols-2 lg:grid-cols-4 gap-3 pb-10 place-items-center"
+      ></div>
+      <div class="flex justify-between px-2">
+        <p class="text-2xl font-bold">Best Deal For You</p>
+        <button class="btn bg-green-500">Sort By</button>
+      </div>
+
+      <div class="flex justify-center">
+        <span
+          id="loading"
+          class="loading loading-bars loading-lg hidden pb-[500px]"
+        >
+        </span>
+      </div>
+
+      <div class="grid grid_container lg:gap-5 gap-1 px-2" id="grid_container">
+        <div id="card_container" class="py-10 grid lg:grid-cols-3 gap-5"></div>
+        <div>
+          <div
+            id="img_container"
+            class="border-2 rounded-xl p-2 border-gray-300 my-10 grid lg:grid-cols-2 gap-2"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="footer bg-black text-white p-10 flex justify-around flex-col lg:flex-row"
+    >
+      <nav>
+        <div class="flex space-x-2">
+          <img src="./images/logo.webp" class="w-10" alt="" />
+          <p class="text-3xl font-bold">Peddy</p>
+        </div>
+        <a class="link link-hover">Location: av. Washington 165, NY CA 54003</a>
+        <a class="link link-hover">Phone: +31 85 964 47 25</a>
+        <a class="link link-hover">Email: info@yourdomain.com</a>
+        <nav>
+          <div class="grid grid-flow-col gap-4">
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                ></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                ></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Useful Links</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">About Us</a>
+        <a class="link link-hover">Animals</a>
+        <a class="link link-hover">Foundation</a>
+        <a class="link link-hover">Contact</a>
+      </nav>
+
+      <form>
+        <h6 class="footer-title">Newsletter</h6>
+        <fieldset class="form-control w-80">
+          <label class="label">
+            <span class="label-text text-white">Enter your email address</span>
+          </label>
+          <div class="join">
+            <input
+              type="text"
+              placeholder="username@site.com"
+              class="input input-bordered join-item"
+            />
+            <button class="btn btn-primary join-item">Subscribe</button>
+          </div>
+        </fieldset>
+      </form>
+    </footer>
+
+    <!-- modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <button
+      id="showModalData"
+      class="btn hidden"
+      onclick="my_modal_5.showModal()"
+    >
+      open modal
+    </button>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="modalContent" class="space-y-4"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button id="showAdopted" class="btn hidden" onclick="my_modal.showModal()">
+      open modal
+    </button>
+    <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div class="flex flex-col items-center">
+          <h1 class="text-center text-3xl font-bold">Congratulations</h1>
+          <img
+            src="data:image/png;base64,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"
+          />
+          <h1 class="text-center text-3xl font-bold">
+            Getting your pet right now
+          </h1>
+          <p
+            id="countdown"
+            class="text-center text-6xl font-bold pt-10 text-green-500"
+          >
+            3
+          </p>
+        </div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button id="close" class="btn hidden">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
