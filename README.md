@@ -15,5 +15,3 @@ Peddy Pet Adoption is a web application designed to connect pet adopters with an
 - **Modules (import/export)**
 - **Promises**
 
-
-## Live Link: https://adoption_web.surge.sh/
